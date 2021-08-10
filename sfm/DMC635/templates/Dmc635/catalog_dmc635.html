@@ -1,0 +1,50 @@
+{% extends 'CTX310/tree.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block Manual %}
+/manuals
+{% endblock %}
+
+
+{% block type %}
+DMC 635V ecoline
+{% endblock %}
+
+
+ 
+
+
+{% block list %}
+
+    {% for i in catalogs %}
+        <div class="alert alert-dark mt-3" style="background-color: rgba(250, 250, 250, 0.6); marging-left: 800px">
+            <a  class="text-dark" target="_blank" rel="noopener noreferrer" href="../media/{{ i.file }}"><p class="h5">операция - {{ i.operation }} - {{ i.title }}</p></a>
+            <p>редакция {{ i.version }} | дата публикации: {{ i.date }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block img%}
+url('{% static 'dmc635.png' %}')
+{% endblock %}
+
+{% block name %}
+Каталоги DMC 635V ecoline
+{% endblock %}
+
+{% block not_name %}
+Каталоги DMC 635V ecoline
+{% endblock %}
+
+{% block 635catalogs %}
+disabled border border-secondary
+{% endblock %}
+
+{% block dmc635 %}
+border border-secondary
+{% endblock %}

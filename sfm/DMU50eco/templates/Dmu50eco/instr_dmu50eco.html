@@ -1,0 +1,46 @@
+{% extends 'CTX310/tree.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block type %}
+DMU 50 ecoline
+{% endblock %}
+
+
+ 
+
+
+{% block list %}
+
+    {% for i in instructions %}
+        <div class="alert alert-dark mt-3" style="background-color: rgba(250, 250, 250, 0.6); marging-left: 800px">
+            <a  class="text-dark" target="_blank" rel="noopener noreferrer" href="../media/{{ i.file }}"><p class="h5">операция - {{ i.operation }} - {{ i.title }}</p></a>
+            <p>редакция {{ i.version }} | дата публикации: {{ i.date }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block img%}
+url('{% static 'dmu50eco.png' %}')
+{% endblock %}
+
+{% block name %}
+Рабочие инструкции DMU 50 ecoline
+{% endblock %}
+
+{% block not_name %}
+Рабочие инструкции DMU 50 ecoline
+{% endblock %}
+
+{% block 50einstructions %}
+disabled border border-secondary
+{% endblock %}
+
+{% block dmu50eco %}
+border border-secondary
+{% endblock %}

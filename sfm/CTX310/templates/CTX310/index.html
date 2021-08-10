@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>UMT</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.3/dist/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="/docs/4.3/vendor/imazin/imazin.css">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      body {
+<!--        background-image: url('{% static 'all.jpg' %}');-->
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment:fixed
+      }
+      img {
+        height:21px;
+      }
+
+      #carouselExampleIndicators {
+        height: 78%;
+        width: 78%;
+        margin-left: 200px;
+
+      }
+      .carousel-control-next-icon {
+      filter: invert(100%)
+      }
+
+      .carousel-control-prev-icon {
+      filter: invert(100%)
+      }
+
+      .carousel-indicators {
+      filter: invert(100%)
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark font-strong" style="background-color: #202B34; min-height: 55px !important;">
+        <img src="{% static 'logo1.png' %}" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item dropdown"><a class="nav-link text-light text-uppercase " data-toggle="dropdown" href="#">CTX 310</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/ctx310/instructions">Инструкции</a>
+                <a class="dropdown-item" href="/ctx310/manuals">Мануалы</a>
+                <a class="dropdown-item" href="/ctx310/circuits">Эл.схемы</a>
+                <a class="dropdown-item" href="/ctx310/catalogs">Каталоги</a>
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown"><a class="nav-link text-light text-uppercase" data-toggle="dropdown" href="#">CTX 510</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/ctx510/instructions">Инструкции</a>
+                <a class="dropdown-item" href="/ctx510/manuals">Мануалы</a>
+                <a class="dropdown-item" href="/ctx510/circuits">Эл.схемы</a>
+                <a class="dropdown-item" href="/ctx510/catalogs">Каталоги</a>
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown"><a class="nav-link text-light text-uppercase" data-toggle="dropdown" href="#">DMC 635V</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/dmc635/instructions">Инструкции</a>
+                <a class="dropdown-item" href="/dmc635/manuals">Мануалы</a>
+                <a class="dropdown-item" href="/dmc635/circuits">Эл.схемы</a>
+                <a class="dropdown-item" href="/dmc635/catalogs">Каталоги</a>
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown"><a class="nav-link text-light text-uppercase" data-toggle="dropdown" href="#">DMC 1035V</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/dmc1035/instructions">Инструкции</a>
+                <a class="dropdown-item" href="/dmc1035/manuals">Мануалы</a>
+                <a class="dropdown-item" href="/dmc1035/circuits">Эл.схемы</a>
+                <a class="dropdown-item" href="/dmc1035/catalogs">Каталоги</a>
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown"><a class="nav-link text-light text-uppercase" data-toggle="dropdown" href="#">DMU 50eco</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/dmu50eco/instructions">Инструкции</a>
+                <a class="dropdown-item" href="/dmu50eco/manuals">Мануалы</a>
+                <a class="dropdown-item" href="/dmu50eco/circuits">Эл.схемы</a>
+                <a class="dropdown-item" href="/dmu50eco/catalogs">Каталоги</a>
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown"><a class="nav-link text-light text-uppercase" data-toggle="dropdown" href="#">DMU 50premium</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/dmu50pre/instructions">Инструкции</a>
+                <a class="dropdown-item" href="/dmu50pre/manuals">Мануалы</a>
+                <a class="dropdown-item" href="/dmu50pre/circuits">Эл.схемы</a>
+                <a class="dropdown-item" href="/dmu50pre/catalogs">Каталоги</a>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    </header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner mx-auto">
+    <div class="carousel-item active">
+      <a href="/ctx310/instructions"><img class="d-block w-100 h-100" src="{% static '310.png' %}" alt="CTX310"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="/ctx510/instructions"><img class="d-block w-100 h-100" src="{% static '510.png' %}" alt="CTX510"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="/dmc635/instructions"><img class="d-block w-100 h-100" src="{% static '635.png' %}" alt="DMC635"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="/dmc1035/instructions"><img class="d-block w-100 h-100" src="{% static '1035.png' %}" alt="DMC635"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="/dmu50eco/instructions"><img class="d-block w-100 h-100" src="{% static '50eco.png' %}" alt="DMU50eco"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="/dmu50pre/instructions"><img class="d-block w-100 h-100" src="{% static '50pre.png' %}" alt="DMU50pre"></a>
+    </div>
+    <div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div>
+      <ol class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+  </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
