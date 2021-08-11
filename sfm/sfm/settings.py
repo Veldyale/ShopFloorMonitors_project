@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'DMC1035.apps.Dmc1035Config',
     'DMU50eco.apps.Dmu50ecoConfig',
     'DMU50pre.apps.Dmu50preConfig',
+    'kanban.apps.KanbanConfig',
 ]
 
 MIDDLEWARE = [

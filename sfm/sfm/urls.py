@@ -26,4 +26,5 @@ urlpatterns = [
     path('', include('DMC1035.urls')),
     path('', include('DMU50eco.urls')),
     path('', include('DMU50pre.urls')),
+    path('', include('kanban.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

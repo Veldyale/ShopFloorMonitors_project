@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Instruction(models.Model):
-    operation = models.PositiveIntegerField()
-    number = models.CharField(max_length=50)
+    operation = models.PositiveIntegerField(unique=True)
+    number = models.CharField(max_length=50, unique=True)
     version = models.CharField(max_length=12)
     title = models.CharField(max_length=100)
     date = models.DateField()
@@ -21,7 +21,7 @@ class Instruction(models.Model):
 
 
 class Manual(models.Model):
-    operation = models.PositiveIntegerField()
+    operation = models.PositiveIntegerField(unique=True)
     title = models.CharField(max_length=100)
     date = models.DateField()
     file = models.FileField(upload_to='pdf_files/')
@@ -35,7 +35,7 @@ class Manual(models.Model):
 
 
 class Circuit(models.Model):
-    operation = models.PositiveIntegerField()
+    operation = models.PositiveIntegerField(unique=True)
     title = models.CharField(max_length=100)
     date = models.DateField()
     file = models.FileField(upload_to='pdf_files/')
@@ -49,7 +49,7 @@ class Circuit(models.Model):
 
 
 class Catalog(models.Model):
-    operation = models.PositiveIntegerField()
+    operation = models.PositiveIntegerField(unique=True)
     title = models.CharField(max_length=100)
     date = models.DateField()
     file = models.FileField(upload_to='pdf_files/')

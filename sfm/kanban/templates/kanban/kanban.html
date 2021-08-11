@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>{% block title %}{% endblock %}</title>
+    <title>Kanban</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
@@ -121,22 +121,23 @@
               </div>
             </li>
 
-            <a class="nav-link text-light text-capitalize" href="../kanban">kan ban</a>
-
+            <a class="nav-link text-light text-capitalize disabled border border-secondary" href="#">kan ban</a>
 
           </ul>
         </div>
       </nav>
     </header>
     <main class="container mt-5">
-      {% if instructions %}
-        <br>
-        <p id=name class="h2 ml-3">{% block name %}{% endblock %}:</p>
-        <p class="h4">{% block list %}{% endblock %}</p>
-      {% else %}
-        <br>
-        <p id=name class="h2 ml-3">{% block not_name %}{% endblock %} отсутствуют...</p>
-      {% endif %}
+
+        <h1>{{ i.title }}</h1>
+
+        {% for i in items %}
+            <div class="alert alert-dark mt-3" style="background-color: rgba(250, 250, 250, 0.6); marging-left: 800px">
+                <a  class="text-dark" target="_blank" rel="noopener noreferrer" href="#"><p class="h5">id - {{ i.baan_id }} - {{ i.title }} - {{ i.assembly_place }}</p></a>
+            </div>
+        {% endfor %}
+
+
     </main>
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
