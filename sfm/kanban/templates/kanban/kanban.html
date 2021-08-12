@@ -61,7 +61,6 @@
 
           <ul class="navbar-nav ml-auto">
 
-
             <li class="nav-item dropdown"><a class="nav-link text-light text-uppercase {% block ctx310 %}{% endblock %}" data-toggle="dropdown" href="#">CTX 310</a>
               <div class="dropdown-menu">
                 <a class="dropdown-item {% block 310instructions %}{% endblock %}" href="/ctx310/instructions">Инструкции</a>
@@ -126,18 +125,100 @@
           </ul>
         </div>
       </nav>
+
+          <div class="container-fluid alert alert-dark" style="background-color: white; border: 0px">
+              <div class="row">
+            <form class="form-inline" style="width:250%; margin-left: 370px" action="{% url 'kanban' %}}">
+                <div class="col-sm-8">
+                  <input class="form-control mr-sm-2" type="text" name="key_item" placeholder="Введите данные для поиска..." style="width:100%;">
+                </div>
+                <div class="col-sm-4">
+                  <button class="btn btn-outline-secondary text-dark" style="background: #e5e5e5;" type="submit">Найти</button>
+                </div>
+            </form>
+              </div>
+          </div>
     </header>
-    <main class="container mt-5">
-
-        <h1>{{ i.title }}</h1>
-
-        {% for i in items %}
-            <div class="alert alert-dark mt-3" style="background-color: rgba(250, 250, 250, 0.6); marging-left: 800px">
-                <a  class="text-dark" target="_blank" rel="noopener noreferrer" href="#"><p class="h5">id - {{ i.baan_id }} - {{ i.title }} - {{ i.assembly_place }}</p></a>
-            </div>
-        {% endfor %}
-
-
+    <br>
+    <br>
+    <br>
+    <main class="container-fluid mt-5">
+      <table class="table table-striped text-center">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Наименование</th>
+            <th>ISO</th>
+            <th>Размер</th>
+            <th>Прочность</th>
+            <th>Цвет</th>
+            <th>В цехе</th>
+            <th>На складе</th>
+          </tr>
+        </thead>
+              {% for i in items %}
+              <tr>
+                <td>
+                    <div>
+                        <a  class="text-dark" target="_blank" rel="noopener noreferrer"><p class="h6">{{ i.baan_id }}</p></a>
+                    </div>
+                </td>
+                <td>
+                      <div>
+                          <a  class="text-dark text-left" target="_blank" rel="noopener noreferrer"><p class="h6">{{ i.title }}</p></a>
+                      </div>
+                </td>
+                <td>
+                  {% if i.iso %}
+                      <div>
+                          <a  class="text-dark" target="_blank" rel="noopener noreferrer"><p class="h6">{{ i.iso }}</p></a>
+                      </div>
+                  {% endif %}
+                </td>
+                <td>
+                  <div>
+                      <a  class="text-dark" target="_blank" rel="noopener noreferrer"><p class="h6">
+                        {% if i.screw_thread %}
+                          {{ i.screw_thread }}
+                        {% endif %}
+                        {% if i.diameter %}
+                          {{ i.diameter }}
+                        {% endif %}
+                        {% if i.length %}
+                          x {{ i.length }}
+                        {% endif %}
+                        {% if i.height %}
+                          x {{ i.height }}
+                        {% endif %}
+                      </p></a>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                  {% if i.strength %}
+                      <a  class="text-dark" target="_blank" rel="noopener noreferrer"><p class="h6">{{ i.strength }}</p></a>
+                  {% endif %}
+                  </div>
+                </td>
+                <td>
+                  <div>
+                      <a  class="text-dark" target="_blank" rel="noopener noreferrer"><p class="h6">{{ i.color }}</p></a>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                      <a  class="text-dark" target="_blank" rel="noopener noreferrer"><p class="h6">{{ i.assembly_place }}</p></a>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                      <a  class="text-dark" target="_blank" rel="noopener noreferrer"><p class="h6">{{ i.warehouse_place }}</p></a>
+                  </div>
+                </td>
+              </tr>
+              {% endfor %}
+        </tbody>
+      </table>
     </main>
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

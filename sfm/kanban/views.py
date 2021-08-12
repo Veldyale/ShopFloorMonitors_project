@@ -8,3 +8,6 @@ def kanban(request):
 def kanban(request):
     items = Item.objects.order_by('assembly_place')
     return render(request, 'kanban/kanban.html', {'id': 'id', 'items': items})
+
+def search():
+    return Item.objects.filter(Item.assembly_place)

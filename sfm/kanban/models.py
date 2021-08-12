@@ -8,6 +8,7 @@ class Item(models.Model):
     screw_thread = models.CharField(max_length=5, blank=True)
     diameter = models.PositiveIntegerField(blank=True)
     length = models.PositiveIntegerField(blank=True)
+    height = models.PositiveIntegerField(blank=True)
     strength = models.DecimalField(max_digits=3, decimal_places=1, blank=True)
     iso = models.CharField(max_length=100, blank=True)
     color = models.CharField(max_length=10, blank=True)
