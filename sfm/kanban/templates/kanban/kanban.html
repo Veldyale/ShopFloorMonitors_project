@@ -128,14 +128,16 @@
 
           <div class="container-fluid alert alert-dark" style="background-color: white; border: 0px">
               <div class="row">
-            <form class="form-inline" style="width:250%; margin-left: 370px" action="{% url 'kanban' %}}">
+
+            <form class="form-inline" style="width:250%; margin-left: 370px" action="{% url 'kanban' %}" method="get">
                 <div class="col-sm-8">
-                  <input class="form-control mr-sm-2" type="text" name="key_item" placeholder="Введите данные для поиска..." style="width:100%;">
+                  <input class="form-control mr-sm-2" type="text" name="key_item" placeholder="Введите данные для поиска..." style="width:100%;" name="key_item">
                 </div>
                 <div class="col-sm-4">
                   <button class="btn btn-outline-secondary text-dark" style="background: #e5e5e5;" type="submit">Найти</button>
                 </div>
             </form>
+
               </div>
           </div>
     </header>
@@ -178,17 +180,8 @@
                 <td>
                   <div>
                       <a  class="text-dark" target="_blank" rel="noopener noreferrer"><p class="h6">
-                        {% if i.screw_thread %}
-                          {{ i.screw_thread }}
-                        {% endif %}
-                        {% if i.diameter %}
-                          {{ i.diameter }}
-                        {% endif %}
-                        {% if i.length %}
-                          x {{ i.length }}
-                        {% endif %}
-                        {% if i.height %}
-                          x {{ i.height }}
+                        {% if i.size %}
+                          {{ i.size }}
                         {% endif %}
                       </p></a>
                   </div>
